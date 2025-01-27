@@ -1,0 +1,15 @@
+@use 'config/cores.scss';
+@use 'config/reset';
+@use 'secoes/produtos.scss';
+
+/*para criar uma variavel eu uso o que esta acima $nome da variavel: o que vc quer aqui;*/
+/*usando o &:hover eu diminuo mais*/
+/*Com o SASS eu tenho a possibilidade de escrever um pouco mais compilado do o original no css "mais legivel e mneos verboso" criando mais regras sem escrever tanto*/
+
+body{
+    background-color: cores.$cordeletra;
+}
+header{
+    margin: 16px;
+
+}

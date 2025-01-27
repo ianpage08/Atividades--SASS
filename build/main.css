@@ -1,0 +1,27 @@
+/*para criar uma variavel eu uso o que esta acima $nome da variavel: o que vc quer aqui;*/
+/*usando o &:hover eu diminuo mais*/
+/*Com o SASS eu tenho a possibilidade de escrever um pouco mais compilado do o original no css "mais legivel e menos verboso" criando mais regras sem escrever tanto*/
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+.produto {
+  background-color: darkgreen;
+  padding: 10px;
+  margin: 10px 0px;
+}
+
+/*para criar uma variavel eu uso o que esta acima $nome da variavel: o que vc quer aqui;*/
+/*usando o &:hover eu diminuo mais*/
+/*Com o SASS eu tenho a possibilidade de escrever um pouco mais compilado do o original no css "mais legivel e mneos verboso" criando mais regras sem escrever tanto*/
+body {
+  background-color: gray;
+}
+
+header {
+  margin: 16px;
+}
+
+/*# sourceMappingURL=main.css.map */
