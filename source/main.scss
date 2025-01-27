@@ -1,0 +1,87 @@
+@use 'config/reset.scss';
+@use 'config/variaveis.scss';
+@use 'sass:math';
+
+@mixin elementoform(){
+    padding: 8px;   
+    display: block;
+    width: 100%;
+    margin-bottom: 16px;
+}
+// função para calcular font sem precisar estar escrevedo
+@function pixelParaEm($alvoEmPixel, $contextoEmPixel: 16px){
+    @return math.div($alvoEmPixel, $contextoEmPixel)+em;
+}
+
+body{
+    background-color: rgb(215, 239, 250);
+}
+
+header{
+    text-align: center;
+    background-color: variaveis.$corprincipal;
+    padding: 10px;
+}
+
+.container{
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.form-container{
+    height: calc(100vh - 70px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2{
+        font-size: pixelParaEm(50px);
+        text-align: center;
+    }
+
+    form{
+        width: 100%;
+        max-width:800px;
+        margin-top: 50px;
+
+        input {
+            @include elementoform();
+            background-color: transparent;
+            border: none;
+            border-bottom: 2px solid variaveis.$corprincipal;
+            &:hover{
+            transition: 0.5s;
+            transform: scale(1.03); 
+            }
+        }
+
+        button{
+            @include elementoform();
+            color: white;
+            border: none;
+            background-color: variaveis.$corsecundaria;
+            border-radius: 10px;
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+        &:hover{
+            transition: 0.5s;
+            transform: scale(1.03); 
+            color: black;
+            background-color: #ffaf40;
+        }
+        }
+        label{
+            cursor: pointer;
+            font-weight: bold;
+        }
+    }
+}
+
+@media screen and (max-width: variaveis.$mobile) {
+    .container{
+        max-width: 80%;
+    }
+}
